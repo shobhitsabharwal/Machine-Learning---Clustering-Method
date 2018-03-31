@@ -33,4 +33,13 @@ clusplot(x = X,
          main = "Clusters",
          xlab = "Annual Income",
          ylab = "Spending score")
-         
+  
+
+# a plot without scaling
+plot(x=X[,1], y=X[,2], col=kmeans$cluster, pch=19, 
+     xlim=c(from=min(X[,1]), to=max(X[,1]+30)),
+     xlab="Annual Income", ylab="Spending Score",
+     main = "Clusters")
+clusters=c("Careless", "Standard", "Sensible", "Target", "Careful")
+legend('bottomright', legend=clusters, col=1:5, pch=19, horiz=F)
+
